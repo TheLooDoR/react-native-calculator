@@ -1,0 +1,16 @@
+export const ALL_CLEAR = 'AC'
+export const PLUS_MINUS = '+/-'
+export const PERCENTAGE = '%'
+export const DECIMAL = '.'
+
+export const DIVISION = '÷'
+export const MULTIPLICATION = '×'
+export const SUBTRACTION = '−'
+export const ADDITION = '+'
+export const EQUAL = '='
+
+export const MEMORY_CLEAN = 'mc'
+export const MEMORY_SAVE = 'ms'
+export const MEMORY_READ = 'mr'
+export const MEMORY_SUB = 'm-'
+export const MEMORY_ADD = 'm+'
