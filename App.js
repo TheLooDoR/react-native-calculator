@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import { Calculator } from "./src/screens/Calculator";
+import { Calculator } from './src/screens/Calculator'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Calculator/>
+      <Calculator />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: '#000',
-  }
+    flex: 1,
+    backgroundColor: '#000',
+  },
 })

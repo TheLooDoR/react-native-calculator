@@ -190,19 +190,22 @@ export const Calculator = () => {
     processInput(text)
   }
   const valueFontSize =
-    `${displayValue}`.length > maxSizeBeforeResizing ? 30 : 60
+    `${displayValue}`.length > maxSizeBeforeResizing ? 30 : 50
   return (
     <View style={styles.calculator}>
       <StatusBar barStyle="light-content" />
-      <View>{!memorySave && <Text style={styles.memory}>M</Text>}</View>
 
-      <View style={styles.calculatorBody}>
+      <View style={styles.valueWrap}>
+        <Text style={styles.memory}>{!memorySave && 'M'}</Text>
+
         <Text style={{ ...styles.value, fontSize: valueFontSize }}>
           {numbro(parseFloat(displayValue)).format({
             thousandSeparated: true,
           })}
         </Text>
+      </View>
 
+      <View style={styles.keyboard}>
         <View style={styles.row}>
           <Button text={ALL_CLEAR} theme="additional" onPress={pressHandler} />
           <Button text={PLUS_MINUS} theme="additional" onPress={pressHandler} />
@@ -260,8 +263,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  calculatorBody: {
-    paddingBottom: 10,
+  valueWrap: {
+    justifyContent: 'space-between',
+    height: '10%',
+  },
+  keyboard: {
+    height: '80%',
   },
   value: {
     color: '#fff',
@@ -277,5 +284,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    height: '16.5%',
+    justifyContent: 'space-between',
   },
 })

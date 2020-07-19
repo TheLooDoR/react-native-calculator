@@ -1,8 +1,8 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native'
 
-const screen = Dimensions.get('window')
-const buttonWidth = screen.width / 4
+const window = Dimensions.get('window')
+const buttonWidth = window.width / 4
 
 export const Button = ({ size, text, theme, onPress }) => {
   const buttonStyles = [styles.button]
@@ -32,12 +32,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#333333',
     borderRadius: Math.floor(buttonWidth),
-    height: Math.floor(buttonWidth - 10),
+    height: Math.floor(window.height / 6 - 40),
     margin: 5,
   },
   longButton: {
-    width: screen.width / 2 - 10,
     flex: 0,
+    width: Math.floor(window.width / 2 - 10),
     alignItems: 'flex-start',
     paddingLeft: 40,
   },
