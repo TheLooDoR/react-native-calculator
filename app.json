@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "My calculator",
+    "description": "Calculator application",
     "slug": "react-native-calculator",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,11 +12,9 @@
       "backgroundColor": "#ffffff"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 500
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
